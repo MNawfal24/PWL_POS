@@ -11,6 +11,7 @@ use App\Http\Controllers\KategoriController;
 
 Route::get('/level', [LevelController::class, 'index']);
 Route::get('/kategori', [KategoriController::class, 'index']);
+Route::get('/user', [UserController::class, 'index']);
 
 // Halaman Awal (Home)
 Route::get('/', [HomeController::class, 'index']);

@@ -1,10 +1,17 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-
-class SalesController extends Controller
+use App\Models\UserModel;
+use Illuminate\Support\Facades\Hash;
+class UserController extends Controller
 {
     public function index() {
-        return view('sales');
+       $data = [
+        'nama' => 'Pelanggaran Pertama'
+       ];
+         UserModel::where('username', 'customer-1')->update($data);
+
+         $user = UserModel::all();
+         return view('user', ['data' => $user]);
     }
 }
