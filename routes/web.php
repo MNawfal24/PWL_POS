@@ -5,6 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SalesController;
+use App\Http\Controllers\LevelController;
+
+Route::get('/level', [LevelController::class, 'index']);
 
 // Halaman Awal (Home)
 Route::get('/', [HomeController::class, 'index']);
